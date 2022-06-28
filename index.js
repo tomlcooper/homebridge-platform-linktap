@@ -70,7 +70,7 @@ LinkTapAccessory.prototype.getServices = function() {
 };
 
 LinkTapAccessory.prototype.getTapService = function() {
-  var tapService = new Service.Switch(this.name);
+  var tapService = new Service.irrigationSystem(this.name);
   tapService.getCharacteristic(Characteristic.On).on('set', this.turnOnTheTap.bind(this));
 
   /**
